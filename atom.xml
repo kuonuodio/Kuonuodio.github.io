@@ -6,7 +6,7 @@
   <link href="https://kuonuodio.github.io/atom.xml" rel="self"/>
   
   <link href="https://kuonuodio.github.io/"/>
-  <updated>2023-08-28T10:05:42.306Z</updated>
+  <updated>2023-08-29T07:21:51.680Z</updated>
   <id>https://kuonuodio.github.io/</id>
   
   <author>
@@ -17,60 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://kuonuodio.github.io/2023/08/28/test/"/>
-    <id>https://kuonuodio.github.io/2023/08/28/test/</id>
-    <published>2023-08-28T10:05:42.000Z</published>
-    <updated>2023-08-28T10:05:42.306Z</updated>
+    <title>github托管</title>
+    <link href="https://kuonuodio.github.io/2023/08/29/github-tuo-guan/"/>
+    <id>https://kuonuodio.github.io/2023/08/29/github-tuo-guan/</id>
+    <published>2023-08-29T07:21:51.000Z</published>
+    <updated>2023-08-29T07:21:51.680Z</updated>
     
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>hello word</title>
-    <link href="https://kuonuodio.github.io/2023/07/28/frist/"/>
-    <id>https://kuonuodio.github.io/2023/07/28/frist/</id>
-    <published>2023-07-28T03:13:13.419Z</published>
-    <updated>2023-08-28T10:01:29.957Z</updated>
-    
-    <content type="html"><![CDATA[<p>吃我一记咸鱼突刺</p><p>测试</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;吃我一记咸鱼突刺&lt;/p&gt;
-&lt;p&gt;测试&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>my new Post</title>
-    <link href="https://kuonuodio.github.io/2023/07/28/my-new-post/"/>
-    <id>https://kuonuodio.github.io/2023/07/28/my-new-post/</id>
-    <published>2023-07-28T03:11:00.000Z</published>
-    <updated>2023-08-25T09:02:54.488Z</updated>
-    
-    <content type="html"><![CDATA[<p>不知道说点啥反正就是很咸鱼</p><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h6 id="最多六级标题"><a href="#最多六级标题" class="headerlink" title="最多六级标题"></a>最多六级标题</h6><p><em>斜体</em><br><strong>粗体</strong><br><strong><em>斜体加粗</em></strong></p><hr><p><del>删除线</del></p><p><u>下划线</u></p><p>创建脚注格式类似这样 [^RUNOOB]。</p><p>[^RUNOOB]: 菜鸟教程 – 学的不仅是技术，更是梦想！！</p><ul><li>第一</li><li>第一</li></ul><ul><li>第二</li><li>第二</li></ul><ul><li>第三</li><li>第三</li></ul><ol><li><p>第一</p></li><li><p>第二</p></li><li><p>第三</p></li><li><p>第一：<br>- 子类<br>- 第二子类</p></li><li><p>第二父类：<br>- 子类</p></li></ol><blockquote><p>区块引用</p><blockquote><p>区块嵌套</p><blockquote><p>区块嵌套套</p></blockquote></blockquote></blockquote><blockquote><p>区块使用列表</p><ol><li>列表</li><li>列表</li><li>列表</li></ol></blockquote><p> <code>printf()</code>函数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/* 函数返回一个字符串 */</span><br><span class="line">char * foo(void)</span><br><span class="line">&#123;</span><br><span class="line">  return &quot;Hello world!&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HelloWorld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这是一个地址<a href="https://www.baidu.com/">百度</a></p><p><a href="https://www.runoob.com/">https://www.runoob.com</a></p><p><img src="https://t7.baidu.com/it/u=4036010509,3445021118&fm=193&f=GIF" alt="RUNOOB 图标"></p><p><img src="https://t7.baidu.com/it/u=4036010509,3445021118&fm=193&f=GIF" alt="RUNOOB 图标" title="RUNOOB"></p><table><thead><tr><th>表头</th><th>表头</th></tr></thead><tbody><tr><td>单元格</td><td>单元格</td></tr><tr><td>单元格</td><td>单元格</td></tr></tbody></table><table><thead><tr><th align="left">左对齐</th><th align="right">右对齐</th><th align="center">居中对齐</th></tr></thead><tbody><tr><td align="left">单元格</td><td align="right">单元格</td><td align="center">单元格</td></tr><tr><td align="left">单元格</td><td align="right">单元格</td><td align="center">单元格</td></tr></tbody></table><p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;不知道说点啥反正就是很咸鱼&lt;/p&gt;
-&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot; title=&quot;一级标题&quot;&gt;&lt;/a&gt;一级标题&lt;/h1&gt;&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerl</summary>
-      
-    
-    
-    
-    
-    <category term="test测试" scheme="https://kuonuodio.github.io/tags/test%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
@@ -95,27 +50,6 @@
     
     
     <category term="test测试" scheme="https://kuonuodio.github.io/tags/test%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://kuonuodio.github.io/2023/07/28/hello-world/"/>
-    <id>https://kuonuodio.github.io/2023/07/28/hello-world/</id>
-    <published>2023-07-28T01:23:31.324Z</published>
-    <updated>2023-07-28T03:23:50.458Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是我第一次搭建了自己的网站来记录下自己学习心得与问题。希望我能坚持下去。</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这是我第一次搭建了自己的网站来记录下自己学习心得与问题。希望我能坚持下去。&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick St</summary>
-      
-    
-    
-    
     
   </entry>
   

@@ -1,8 +1,5 @@
+https://kuonuodio.github.io/2023/08/29/github-tuo-guan/
 https://kuonuodio.github.io/2023/07/28/guan-yu-httpclient-de-httpget-he-httppost/
-https://kuonuodio.github.io/2023/08/28/test/
-https://kuonuodio.github.io/2023/07/28/frist/
-https://kuonuodio.github.io/2023/07/28/my-new-post/
-https://kuonuodio.github.io/2023/07/28/hello-world/
 https://kuonuodio.github.io/categories/index.html
 https://kuonuodio.github.io/contact/index.html
 https://kuonuodio.github.io/tags/index.html
