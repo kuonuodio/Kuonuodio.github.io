@@ -8,7 +8,7 @@
       <link href="/2023/08/29/github-tuo-guan/"/>
       <url>/2023/08/29/github-tuo-guan/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<ul><li>hexo clean</li><li>hexo generate  生成静态文件</li><li>hexo deploy</li></ul><p>可以通过github中的Custom domain来修改域名</p>]]></content>
       
       
       
