@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>关于httpClient的httpGet和HttpPost | sax</title>
+<title>定时任务 | sax</title>
 <noscript>开启Javascript是必要的</noscript>
 <link rel="icon" type="image/x-icon" href="/img/avatar.webp">
 <link rel="apple-touch-icon" href="/img/avatar.webp">
@@ -34,7 +34,7 @@
 
 
 
-<script>var GLOBALCONFIG = {"root":"/","runtime":"2021-12-12 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":false,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":false,"comment":{"enable":true,"twikooUrl":null}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":true,"is_page":false,"page":false,"toc":true,"comment":false};</script>
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2021-12-12 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":false,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":false,"comment":{"enable":true,"twikooUrl":null}};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":true,"is_page":false,"page":false,"toc":true,"comment":true};</script>
     <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="sax" type="application/atom+xml">
 </head>
     <body id="body">
@@ -229,7 +229,7 @@
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">关于httpClient的httpGet和HttpPost</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">定时任务</a>
             </div>
         </div>
         <div id="menus">
@@ -314,27 +314,22 @@
             <div class="tag_share">
                 <div class="post-meta__tag-list">
                     
-                        <a class="post-meta__tags" href="/tags/test%E6%B5%8B%E8%AF%95/">
-                            <span class="tags-punctuation">#</span>
-                            <span class="tags-name">test测试</span>
-                        </a>
-                    
                 </div>
             </div>
         </div>
     </div>
-    <h1 class="post-title">关于httpClient的httpGet和HttpPost</h1>
+    <h1 class="post-title">定时任务</h1>
     <div id="post-meta">
         <div class="meta-secondline">
             <span class="post-meta-date" title="发布于">
                 <i class="post-meta-icon fa-fw fas fa-calendar"></i>
-                <time datetime="2023-07-28T11:11:00+08:00"></time>
+                <time datetime="2023-08-30T10:48:23+08:00"></time>
             </span>
             
             
-                <span class="post-meta-position" title="作者IP归属地为北京">
+                <span class="post-meta-position" title="作者IP归属地为被窝">
                     <i class="fas fa-location-dot post-meta-icon"></i>
-                    <span>北京</span>
+                    <span>被窝</span>
                 </span>
             
             
@@ -363,10 +358,12 @@
                 <main class="layout" id="content-inner">
     <div id="post">
         <article class="post-content" id="article-container">
-            <p>无论是使用HttpGet，还是使用HttpPost，都必须通过如下3步来访问HTTP资源。</p>
-<p>1.创建HttpGet或HttpPost对象，将要请求的URL通过构造方法传入HttpGet或HttpPost对象。</p>
-<p>2.使用DefaultHttpClient类的execute方法发送HTTP GET或HTTP POST请求，并返回HttpResponse对象。</p>
-<p>3.通过HttpResponse接口的getEntity方法返回响应信息，并进行相应的处理</p>
+            <h3 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h3><ol>
+<li><strong>线程等待</strong><br>通过创建thread，然后在while循环中通过sleep来设置休眠时间来定时。<br>实例 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">long</span> <span class="variable">timeInterval</span> <span class="operator">=</span> <span class="number">1000</span>;</span><br><span class="line">    <span class="type">Runnable</span> <span class="variable">runnable</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Runnable</span>() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;Hello !!&quot;</span>);</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(timeInterval);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="type">Thread</span> <span class="variable">thread</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(runnable);</span><br><span class="line">    thread.start();</span><br></pre></td></tr></table></figure></li>
+<li><strong>Timer</strong><br>通过jdk自带的Timer来实现，他通过后台线程计划来执行指定任务<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在指定延迟时间后执行指定的任务</span></span><br><span class="line">schedule(TimerTask task,<span class="type">long</span> delay);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在指定时间执行指定的任务。（只执行一次）</span></span><br><span class="line">schedule(TimerTask task, Date time);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 延迟指定时间（delay）之后，开始以指定的间隔（period）重复执行指定的任务</span></span><br><span class="line">schedule(TimerTask task,<span class="type">long</span> delay,<span class="type">long</span> period);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在指定的时间开始按照指定的间隔（period）重复执行指定的任务</span></span><br><span class="line">schedule(TimerTask task, Date firstTime , <span class="type">long</span> period);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在指定的时间开始进行重复的固定速率执行任务</span></span><br><span class="line">scheduleAtFixedRate(TimerTask task,Date firstTime,<span class="type">long</span> period);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在指定的延迟后开始进行重复的固定速率执行任务</span></span><br><span class="line">scheduleAtFixedRate(TimerTask task,<span class="type">long</span> delay,<span class="type">long</span> period);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 终止此计时器，丢弃所有当前已安排的任务。</span></span><br><span class="line">cancal()；</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从此计时器的任务队列中移除所有已取消的任务。</span></span><br><span class="line">purge()；</span><br></pre></td></tr></table></figure></li>
+<li><strong>Quartz</strong><br>使用Quartz可以开发一个或者多个定时任务，每个定时任务可以单独指定执行的时间，例如每隔1小时执行一次、每个月第一天上午10点执行一次、每个月最后一天下午5点执行一次等。<br>Quartz通常有三部分组成：调度器、任务、触发器.<br>定义执行任务Job，构建触发器Trigger，使用调度器绑定触发器和任务；<br>代码示例<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、创建调度器Scheduler</span></span><br><span class="line">        <span class="type">SchedulerFactory</span> <span class="variable">schedulerFactory</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StdSchedulerFactory</span>();</span><br><span class="line">        <span class="type">Scheduler</span> <span class="variable">scheduler</span> <span class="operator">=</span> schedulerFactory.getScheduler();</span><br><span class="line">        <span class="comment">// 2、创建JobDetail实例，并与PrintJob类绑定(Job执行内容)</span></span><br><span class="line">        <span class="type">JobDetail</span> <span class="variable">jobDetail</span> <span class="operator">=</span> JobBuilder.newJob(PrintJob.class)</span><br><span class="line">                .withIdentity(<span class="string">&quot;job&quot;</span>, <span class="string">&quot;group&quot;</span>).build();</span><br><span class="line">        <span class="comment">// 3、构建Trigger实例，每隔1s执行一次</span></span><br><span class="line">        <span class="type">Trigger</span> <span class="variable">trigger</span> <span class="operator">=</span> TriggerBuilder.newTrigger().withIdentity(<span class="string">&quot;trigger&quot;</span>, <span class="string">&quot;triggerGroup&quot;</span>)</span><br><span class="line">                .startNow()<span class="comment">//立即生效</span></span><br><span class="line">                .withSchedule(SimpleScheduleBuilder.simpleSchedule()</span><br><span class="line">                        .withIntervalInSeconds(<span class="number">1</span>)<span class="comment">//每隔1s执行一次</span></span><br><span class="line">                        .repeatForever()).build();<span class="comment">//一直执行</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//4、Scheduler绑定Job和Trigger，并执行</span></span><br><span class="line">        scheduler.scheduleJob(jobDetail, trigger);</span><br><span class="line">        System.out.println(<span class="string">&quot;--------scheduler start ! ------------&quot;</span>);</span><br><span class="line">        scheduler.start();</span><br></pre></td></tr></table></figure></li>
+<li><strong>Spring Task</strong><br>spring自带的一套定时任务工具，支持注解和配置文件两种形式。需要在启动类上加一个@EnableScheduling来开启定时任务<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Scheduled(cron = &quot;0 0 3 * * ?&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">job1</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;通过cron定义的定时任务&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Scheduled(fixedDelay = 1000L)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">job2</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;通过fixedDelay定义的定时任务&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 
         </article>
         <div class="post-tools" id="post-tools">
@@ -379,18 +376,18 @@
         </div>
         <div class="share-main">
             <div class="share-main-all">
-                <div id="qrcode" title="https://kuonuodio.github.io/2023/07/28/guan-yu-httpclient-de-httpget-he-httppost/">
+                <div id="qrcode" title="https://kuonuodio.github.io/2023/08/30/ding-shi-ren-wu/">
                 </div>
                 <div class="reward-dec">使用手机访问这篇文章</div>
             </div>
         </div>
         <script type="text/javascript">
-            new QRCode(document.getElementById("qrcode"), "https://kuonuodio.github.io/2023/07/28/guan-yu-httpclient-de-httpget-he-httppost/");
+            new QRCode(document.getElementById("qrcode"), "https://kuonuodio.github.io/2023/08/30/ding-shi-ren-wu/");
         </script>
     </div>
 </div>
                 <div class="share-link weibo"><a class="share-button" target="_blank"
-    href="https://service.weibo.com/share/share.php?title=关于httpClient的httpGet和HttpPost&amp;url=https://kuonuodio.github.io/2023/07/28/guan-yu-httpclient-de-httpget-he-httppost/&amp;pic=/img/hello.jpg"
+    href="https://service.weibo.com/share/share.php?title=定时任务&amp;url=https://kuonuodio.github.io/2023/08/30/ding-shi-ren-wu/&amp;pic=/img/hello.jpg"
     title="分享到微博" rel="noopener external nofollow noreferrer noopener">
     <i class="fab fa-weibo" style="font-size:22px"></i>
 </a>
@@ -405,12 +402,6 @@
                 <div class="tag_share">
                     <div class="post-meta__tag-list">
                         
-                            <a href="/tags/test%E6%B5%8B%E8%AF%95/" class="post-meta__tags">
-                                <span class="tags-punctuation">#</span>
-                                test测试
-                                <span class="tagsPageCount">1</span>
-                            </a>
-                        
                     </div>
                 </div>
             </div>
@@ -419,12 +410,12 @@
     <div class="post-copyright__author">
         <a class="post-copyright__original" title="该文章为原创文章，注意版权协议">原创</a>
         <a class="post-copyright-title" href="#">
-            <span>关于httpClient的httpGet和HttpPost</span>
+            <span>定时任务</span>
         </a>
     </div>
     <div class="post-copyright__type">
         <span class="post-copyright-info" id="post-copyright-url">
-            <a href="/2023/07/28/guan-yu-httpclient-de-httpget-he-httppost/">https://kuonuodio.github.io/2023/07/28/guan-yu-httpclient-de-httpget-he-httppost/</a>
+            <a href="/2023/08/30/ding-shi-ren-wu/">https://kuonuodio.github.io/2023/08/30/ding-shi-ren-wu/</a>
         </span>
         <button class="post-copyright-copybtn" onclick="acrylic.copyPageUrl()">
             <i class="fas fa-paste copy-btn"></i>
@@ -438,19 +429,46 @@
 </div>
         <nav class="pagination-post" id="pagination">
     
-                
         
-            <div class="prev-post pull-full">
+            <div class="next-post pull-full">
                 <a href="/2023/08/29/github-tuo-guan/">
                     <div class="pagination-info">
-                        <div class="label">上一篇</div>
-                        <div class="prev_info">github托管</div>
+                        <div class="label">下一篇</div>
+                        <div class="next_info">github托管</div>
                     </div>
                 </a>
             </div>
+                
         
     
 </nav>
+        
+            <div id="post-comment">
+    <div class="comment-head">
+        <div class="comment-headline">
+            <i class="fas fa-message fa-fw"></i>
+            <span> 评论</span>
+        </div>
+    </div>
+    <div class="comment-wrap">
+        <div id="comment"></div>
+        <script>
+    async function initComment(){
+        var initOptions = Object.assign(
+            {"envId":null,"path":"window.location.pathname"},
+            {
+                el: '#comment',
+                onCommentLoaded: function() {
+                    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #twikoo .tk-content img:not(.tk-owo-emotion)') 
+                }
+            }
+        )
+        await twikoo.init(initOptions)
+             
+    }
+</script>
+    </div>
+</div>
             
     </div>
     <div class="aside-content" id="aside-content">
@@ -489,7 +507,7 @@
         <span>文章目录</span>
     </div>
     <div class="toc-content" id="toc-content">
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="toc-text">定时任务</span></a></li></ol>
     </div>
 </div>
             
