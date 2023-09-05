@@ -6,7 +6,7 @@
   <link href="https://kuonuodio.github.io/atom.xml" rel="self"/>
   
   <link href="https://kuonuodio.github.io/"/>
-  <updated>2023-09-04T08:06:37.073Z</updated>
+  <updated>2023-09-05T09:27:29.070Z</updated>
   <id>https://kuonuodio.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日运行接口任务</title>
+    <link href="https://kuonuodio.github.io/2023/09/05/mei-ri-yun-xing-jie-kou-ren-wu/"/>
+    <id>https://kuonuodio.github.io/2023/09/05/mei-ri-yun-xing-jie-kou-ren-wu/</id>
+    <published>2023-09-05T02:25:23.689Z</published>
+    <updated>2023-09-05T09:27:29.070Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>查询所有接口中start为0（0开启，1关闭）</li><li>所有查询的数据启动的自动将昨天的日期赋值给开始和结束日期</li><li>在contrller的service层将开始日期的时间设置为00：00：00结束日期的时间为23：59：59(开始日期超过结束日期时，自动退出)</li><li>获取token，如果redis里有则直接获取，如果没有则向token接口发送请求。</li><li>循坏构建查询参数并获取数据</li><li>若获取数据为空则循环六次，六次有一次获取数据则跳出循环，全错无则打出错误日志</li><li>一切正常就保存到日志入库，然后在保存到相对应的数据库</li><li>total等于0或者查询出的结果数量&lt;参数中的查询数量就跳出循环</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;查询所有接口中start为0（0开启，1关闭）&lt;/li&gt;
+&lt;li&gt;所有查询的数据启动的自动将昨天的日期赋值给开始和结束日期&lt;/li&gt;
+&lt;li&gt;在contrller的service层将开始日期的时间设置为00：00：00结束日期的时间为23：59：59(开始日期超</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>测试</title>
